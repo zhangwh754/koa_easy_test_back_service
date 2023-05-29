@@ -10,9 +10,7 @@ const log = date => type =>
 const logNowBug = log(new Date())
 
 const writeLog = fileData => {
-  const errMsg = JSON.parse(fileData).errMsg
-
-  const fileName = path.resolve(__dirname, `../../log/${logNowBug('DEBUG')}.json`)
+  const fileName = path.resolve(__dirname, `../../logs/${logNowBug('DEBUG')}.json`)
 
   writeFile(fileData, fileName)
 }
