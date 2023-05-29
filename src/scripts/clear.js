@@ -19,4 +19,4 @@ function emptyDir(path) {
   })
 }
 
-emptyDir(path.resolve(__dirname, '../../log'))
+emptyDir(path.resolve(__dirname, '../../logs'))
