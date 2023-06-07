@@ -1,5 +1,5 @@
 {
-  "name": "koa_get_frontlog",
+  "name": "koa_easy_test_back_service",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "koa": "^2.14.1",
     "koa-body": "^6.0.1",
-    "koa-router": "^12.0.0"
+    "koa-router": "^12.0.0",
+    "koa2-cors": "^2.0.6"
   }
 }

@@ -2,10 +2,14 @@ const Router = require('koa-router')
 
 const router = new Router({ prefix: '/test' })
 
-router.post('/', (ctx, next) => {
+router.post('/', async (ctx, next) => {
   const requestBody = ctx.request.body
 
   let str = requestBody.str
+
+  console.log(ctx.request.header)
+
+  await wait(1)
 
   if (typeof str === 'string') {
     ctx.body = {
@@ -21,5 +25,12 @@ router.post('/', (ctx, next) => {
     }
   }
 })
+
+/**
+ * 等待指定的秒数，然后返回一个已解析的 Promise。
+ * @param {number} second 要等待的秒数
+ * @returns {Promise<void>}
+ */
+const wait = second => new Promise(resolve => setTimeout(resolve, second * 1000))
 
 module.exports = router
